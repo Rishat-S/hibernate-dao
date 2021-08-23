@@ -5,7 +5,7 @@ import ru.netology.hibernatedemo.model.Person;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
-import java.util.ArrayList;
+import javax.persistence.Query;
 import java.util.List;
 
 @Repository
@@ -15,8 +15,9 @@ public class EntityRepository {
     EntityManager entityManager;
 
     public List<Person> getPersonsByCity(String city) {
-        List<Person> result = new ArrayList<>();
-        result.add(new Person()); //FIXME:
+        Query query = entityManager.createQuery("select p from Person p where p.cityOfLiving = :city", Person.class);
+        query.setParameter("city", city);
+        var result = query.getResultList();
         return result;
     }
 }
