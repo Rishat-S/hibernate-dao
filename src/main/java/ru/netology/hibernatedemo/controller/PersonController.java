@@ -5,17 +5,17 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
-import ru.netology.hibernatedemo.model.Person;
-import ru.netology.hibernatedemo.service.EntityService;
+import ru.netology.hibernatedemo.entity.Person;
+import ru.netology.hibernatedemo.service.PersonService;
 
 import java.util.List;
 
 @RestController
 @RequestMapping("/persons")
-public class EntityController {
+public class PersonController {
 
     @Autowired
-    EntityService entityService;
+    PersonService entityService;
 
     @GetMapping("/by-city")
     public List<Person> getPersonsByCity(@RequestParam(name = "city") String city) {

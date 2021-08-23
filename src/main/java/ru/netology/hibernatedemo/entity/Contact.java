@@ -1,4 +1,4 @@
-package ru.netology.hibernatedemo.model;
+package ru.netology.hibernatedemo.entity;
 
 import lombok.*;
 import org.hibernate.Hibernate;

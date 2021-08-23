@@ -1,7 +1,7 @@
 package ru.netology.hibernatedemo.repository;
 
 import org.springframework.stereotype.Repository;
-import ru.netology.hibernatedemo.model.Person;
+import ru.netology.hibernatedemo.entity.Person;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
@@ -9,7 +9,7 @@ import javax.persistence.Query;
 import java.util.List;
 
 @Repository
-public class EntityRepository {
+public class PersonRepository {
 
     @PersistenceContext
     EntityManager entityManager;
