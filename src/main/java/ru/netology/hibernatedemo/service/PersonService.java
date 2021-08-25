@@ -10,11 +10,11 @@ import java.util.List;
 @Service
 public class PersonService {
     @Autowired
-    PersonRepository entityRepository;
+    PersonRepository personRepository;
 
 
     public List<Person> getPersonsByCity(String city) {
-        return entityRepository.getPersonsByCity(city);
+        return personRepository.getPersonsByCity(city);
     }
 }
 

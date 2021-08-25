@@ -15,10 +15,10 @@ import java.util.List;
 public class PersonController {
 
     @Autowired
-    PersonService entityService;
+    PersonService personService;
 
     @GetMapping("/by-city")
     public List<Person> getPersonsByCity(@RequestParam(name = "city") String city) {
-        return entityService.getPersonsByCity(city);
+        return personService.getPersonsByCity(city);
     }
 }
