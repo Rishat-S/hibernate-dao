@@ -6,6 +6,7 @@ import ru.netology.hibernatedemo.entity.Person;
 import ru.netology.hibernatedemo.repository.PersonCrudRepository;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class PersonService {
@@ -16,8 +17,12 @@ public class PersonService {
         return personCrudRepository.findByCityOfLiving(city);
     }
 
-    public List<Person> getPersonsByAge(int age) {
-        return personCrudRepository.findByContact_AgeLessThan(age);
+    public List<Person> getPersonsByAgeLessThan(int age) {
+        return personCrudRepository.findByContact_AgeLessThanOrderByContact_Age(age);
+    }
+
+    public Optional<Person> getPersonsByNameAndSurname(String name, String surname) {
+        return personCrudRepository.findByContact_NameAndContact_Surname(name, surname);
     }
 }
 

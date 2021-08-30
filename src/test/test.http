@@ -1,6 +1,9 @@
 GET http://localhost:8080/persons/by-city?city=LA
 
 ###
-GET http://localhost:8080/persons/by-age?age=20
+GET http://localhost:8080/persons/by-age?age=25
+
+###
+GET http://localhost:8080/persons/by-name-surname?name=Kate&surname=Hamilton
 
 ###
