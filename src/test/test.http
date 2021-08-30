@@ -1,3 +1,6 @@
 GET http://localhost:8080/persons/by-city?city=LA
 
 ###
+GET http://localhost:8080/persons/by-age?age=20
+
+###

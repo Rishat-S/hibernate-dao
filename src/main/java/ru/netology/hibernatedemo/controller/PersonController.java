@@ -21,4 +21,9 @@ public class PersonController {
     public List<Person> getPersonsByCity(@RequestParam(name = "city") String city) {
         return personService.getPersonsByCity(city);
     }
+
+    @GetMapping("/by-age")
+    public List<Person> getPersonsByCity(@RequestParam(name = "age") int age) {
+        return personService.getPersonsByAge(age);
+    }
 }

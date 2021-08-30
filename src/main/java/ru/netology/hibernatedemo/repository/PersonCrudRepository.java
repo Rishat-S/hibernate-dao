@@ -10,4 +10,7 @@ import java.util.List;
 public interface PersonCrudRepository extends CrudRepository<Person, Long> {
 
     List<Person> findByCityOfLiving(String city);
+
+    List<Person> findByContact_AgeLessThan(int age);
+
 }

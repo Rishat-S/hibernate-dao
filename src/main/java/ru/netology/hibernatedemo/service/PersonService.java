@@ -15,5 +15,9 @@ public class PersonService {
     public List<Person> getPersonsByCity(String city) {
         return personCrudRepository.findByCityOfLiving(city);
     }
+
+    public List<Person> getPersonsByAge(int age) {
+        return personCrudRepository.findByContact_AgeLessThan(age);
+    }
 }
 
