@@ -17,7 +17,6 @@ public class PersonRepository {
     public List<Person> getPersonsByCity(String city) {
         Query query = entityManager.createQuery("select p from Person p where p.cityOfLiving = :city", Person.class);
         query.setParameter("city", city);
-        var result = query.getResultList();
-        return result;
+        return query.getResultList();
     }
 }
